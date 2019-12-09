@@ -1,0 +1,11 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{{ form.username }}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+{% block title %}Dashboard {% endblock %}
+{% block content %}
+    <h1 class="jumbotron">Welcome {{ name}} to dashboard</h1>
+{% endblock %}

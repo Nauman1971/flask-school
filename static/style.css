@@ -1,0 +1,13 @@
+.form-control {
+    width: 95% !important;
+    height: 30px !important;
+}
+.wrapper-forms {
+    background-color:rgba(128,128,0,0.3);
+    width: 40%;
+    padding: 30px;
+    margin: auto;
+}
+.bs-example{
+    	margin: 20px;
+    }

@@ -1,0 +1,43 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% include 'nav.html'%}
+{% block title %}Users {% endblock %}
+{% block content %}
+<div class="bs-example">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <td>Roles</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+
+            <tr>
+                <td>{{users.index(user)}}</td>
+                <td>{{user['username']}}</td>
+                <td>{{ user['roles'] }}</td>
+                <td>
+                    <form action="/delete" method="post">
+            <input type="hidden" name="target_user" value={{user['username']}}>
+            <button class="btn btn-danger">Delete</button>
+        </form>
+                </td>
+                <td>
+                    <form action="/profile" method="post">
+                        <input  type="hidden" name="profile" value="{{ user['username'] }}">
+                        <button class="btn btn-primary">Show Profile</button>
+                    </form></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

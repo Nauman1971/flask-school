@@ -1,0 +1,42 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% include 'nav.html'%}
+{% block title %}Users {% endblock %}
+{% block content %}
+<div class="bs-example">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Name</th>
+                <td>Email</td>
+                <td>Number</td>
+                <td>Roles</td>
+            </tr>
+        </thead>
+        <tbody>
+        {% for profile in profiles %}
+            <tr>
+                <td>{{profile['username']}}</td>
+                <td>{{ profile['email'] }}</td>
+                <td>{{ profile['number'] }}</td>
+                <td>{{ profile['roles'] }}</td></tr>
+                <tr><td>
+                <form action="/update_profile" method="post">
+                        <input name="target_user" value={{profile['username']}}>
+                        <input name="target_email" value={{profile['email']}}>
+                        <input name="target_number" value={{profile['number']}}>
+                        <input name="target_role" value={{ profile['roles'] }}>
+                        <button class="btn btn-primary">Update</button>
+                    </form>
+                </td></tr>
+
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
