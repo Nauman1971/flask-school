@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25f12cd8-a60a-40c5-8d37-fafe87b82b45" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/static/bootstrap-select-country-4.1.0/bootstrap-select-country-4.1.0/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/static/bootstrap-select-country-4.1.0/bootstrap-select-country-4.1.0/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -251,7 +251,7 @@
       <workItem from="1575819553659" duration="7468000" />
       <workItem from="1575887907829" duration="4002000" />
       <workItem from="1575893422775" duration="12172000" />
-      <workItem from="1576600809718" duration="420000" />
+      <workItem from="1576600809718" duration="1048000" />
     </task>
     <servers />
   </component>
