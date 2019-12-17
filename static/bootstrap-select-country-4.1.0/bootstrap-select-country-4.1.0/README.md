@@ -108,10 +108,10 @@ https://github.com/silviomoreto/bootstrap-select/issues/1135
 .bootstrap-select .check-mark {
   line-height: 14px;
 }
-.bootstrap-select .check-mark::after {
-  font-family: "FontAwesome";
-  content: "\f00c";
-}
+/*.bootstrap-select .check-mark::after {*/
+  /*font-family: "FontAwesome";*/
+  /*content: "\f00c";*/
+/*}*/
 .bootstrap-select button {
   overflow: hidden;
   text-overflow: ellipsis;
